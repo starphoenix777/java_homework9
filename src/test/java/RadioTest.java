@@ -2,6 +2,31 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class RadioTest {
+
+    @Test
+    void shouldUseDefaultStationsCount() {
+        Radio radio = new Radio();
+        int expected = 10;
+        int actual = radio.getStationsCount();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void shouldSetCustomStationsCount() {
+        Radio radio = new Radio(30);
+        int expected = 30;
+        int actual = radio.getStationsCount();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void shouldNotAllowInvalidStationsCount() {
+        Radio radio = new Radio(0);
+        int expected = 1;
+        int actual = radio.getStationsCount();
+        Assertions.assertEquals(expected, actual);
+    }
+
     @Test
     public void shouldNotSetCurrentStationOutOfRange1() {  //
         Radio radio = new Radio();
