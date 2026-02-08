@@ -19,12 +19,12 @@ public class Radio {
     }
 
     public int getStationsCount() {
-            return stationsCount;
-        }
+        return stationsCount;
+    }
 
     public int getCurrentVolume() {
-            return currentVolume;
-        }
+        return currentVolume;
+    }
 
     public void setCurrentStation(int newStation) {
         if (newStation < 0) {
@@ -51,8 +51,6 @@ public class Radio {
             currentStation = currentStation - 1;
         }
     }
-
-
 
     public void setCurrentVolume(int newVolume) {
         if (newVolume < 0) {
